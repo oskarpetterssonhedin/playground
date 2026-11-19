@@ -232,3 +232,4 @@ One line per lesson. Add one whenever something breaks and gets fixed.
 - Functions passed to Playwright's `addInitScript`/`evaluate` from a tsx script get esbuild's `__name` helper injected and crash in the browser; pass a string instead.
 - Canvas trails faded by painting a translucent background leave gray ghosts (8-bit rounding); fade with `globalCompositeOperation = "destination-out"` over a transparent canvas instead.
 - shadcn `DrawerContent` sets `data-[vaul-drawer-direction=bottom]:max-h-[80vh]`; override with the same variant prefix, a plain `max-h-*` loses.
+- Vercel env vars must be enabled for **Preview** too, not just Production, or preview deployments see them as unset; redeploy after changing them.

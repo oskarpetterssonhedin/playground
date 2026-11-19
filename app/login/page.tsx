@@ -3,19 +3,22 @@ import type { Metadata } from "next";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { safeNextPath } from "@/lib/auth";
+import { isAuthConfigured, safeNextPath } from "@/lib/auth";
 
 export const metadata: Metadata = { title: "Sign in", robots: { index: false } };
 
-const ERRORS: Record<string, string> = {
-  invalid: "Wrong password.",
-  config: "SITE_PASSWORD or AUTH_SECRET is not set on the server.",
-};
+const CONFIG_ERROR = "SITE_PASSWORD or AUTH_SECRET is not set on the server.";
 
 export default async function LoginPage({ searchParams }: PageProps<"/login">) {
   const params = await searchParams;
   const next = safeNextPath(params.next);
-  const error = typeof params.error === "string" ? ERRORS[params.error] : undefined;
+  // Config is checked live (not from the URL) so a stale ?error=config link
+  // doesn't keep showing the message after the env vars are added.
+  const error = !isAuthConfigured()
+    ? CONFIG_ERROR
+    : params.error === "invalid"
+      ? "Wrong password."
+      : undefined;
 
   return (
     <main className="flex min-h-dvh items-center justify-center px-4">
