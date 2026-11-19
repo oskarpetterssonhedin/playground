@@ -1,0 +1,2291 @@
+[
+ {
+  "c": "se",
+  "n": "Sverige",
+  "l": 1,
+  "k": "Europa",
+  "a": [
+   "svensk",
+   "svenska",
+   "sveriges"
+  ],
+  "f": "Det är landet där du bor!",
+  "p": "",
+  "ar": 1.6
+ },
+ {
+  "c": "no",
+  "n": "Norge",
+  "l": 1,
+  "k": "Europa",
+  "a": [
+   "norsk",
+   "norska"
+  ],
+  "f": "Det är grannlandet bredvid Sverige, med höga berg och fjordar.",
+  "p": "",
+  "ar": 1.375
+ },
+ {
+  "c": "dk",
+  "n": "Danmark",
+  "l": 1,
+  "k": "Europa",
+  "a": [
+   "dansk",
+   "danska"
+  ],
+  "f": "Där kommer Lego ifrån!",
+  "p": "",
+  "ar": 1.3214
+ },
+ {
+  "c": "fi",
+  "n": "Finland",
+  "l": 1,
+  "k": "Europa",
+  "a": [
+   "finsk",
+   "finska"
+  ],
+  "f": "Där bor Mumintrollen!",
+  "p": "",
+  "ar": 1.6364
+ },
+ {
+  "c": "is",
+  "n": "Island",
+  "l": 1,
+  "k": "Europa",
+  "a": [
+   "isländsk",
+   "isländska"
+  ],
+  "f": "Där finns vulkaner och varma källor som sprutar vatten.",
+  "p": "",
+  "ar": 1.3889
+ },
+ {
+  "c": "de",
+  "n": "Tyskland",
+  "l": 1,
+  "k": "Europa",
+  "a": [
+   "tysk",
+   "tyska"
+  ],
+  "f": "Där finns massor av gamla slott.",
+  "p": "",
+  "ar": 1.6667
+ },
+ {
+  "c": "fr",
+  "n": "Frankrike",
+  "l": 1,
+  "k": "Europa",
+  "a": [
+   "fransk",
+   "franska"
+  ],
+  "f": "Där står det höga Eiffeltornet.",
+  "p": "",
+  "ar": 1.5
+ },
+ {
+  "c": "it",
+  "n": "Italien",
+  "l": 1,
+  "k": "Europa",
+  "a": [
+   "italiensk",
+   "italienska"
+  ],
+  "f": "Där kommer pizzan ifrån!",
+  "p": "",
+  "ar": 1.5
+ },
+ {
+  "c": "es",
+  "n": "Spanien",
+  "l": 1,
+  "k": "Europa",
+  "a": [
+   "spansk",
+   "spanska"
+  ],
+  "f": "Där är det varmt och man dansar flamenco.",
+  "p": "",
+  "ar": 1.5
+ },
+ {
+  "c": "gb",
+  "n": "Storbritannien",
+  "l": 1,
+  "k": "Europa",
+  "a": [
+   "britannien",
+   "brittisk",
+   "brittiska",
+   "förenade kungariket",
+   "stor britannien"
+  ],
+  "f": "Där ligger London och där bor kungen.",
+  "p": "",
+  "ar": 2.0
+ },
+ {
+  "c": "us",
+  "n": "USA",
+  "l": 1,
+  "k": "Nordamerika",
+  "a": [
+   "amerika",
+   "amerikansk",
+   "förenta staterna"
+  ],
+  "f": "Där står Frihetsgudinnan i New York.",
+  "p": "",
+  "ar": 1.9
+ },
+ {
+  "c": "ca",
+  "n": "Kanada",
+  "l": 1,
+  "k": "Nordamerika",
+  "a": [
+   "kanadensisk",
+   "canada"
+  ],
+  "f": "Där finns älgar och björnar. Flaggan har ett rött löv.",
+  "p": "",
+  "ar": 2.0
+ },
+ {
+  "c": "jp",
+  "n": "Japan",
+  "l": 1,
+  "k": "Asien",
+  "a": [
+   "japansk",
+   "japanska"
+  ],
+  "f": "Där äter man sushi med pinnar.",
+  "p": "",
+  "ar": 1.5
+ },
+ {
+  "c": "cn",
+  "n": "Kina",
+  "l": 1,
+  "k": "Asien",
+  "a": [
+   "kinesisk",
+   "kinesiska"
+  ],
+  "f": "Där bor pandorna!",
+  "p": "",
+  "ar": 1.5
+ },
+ {
+  "c": "br",
+  "n": "Brasilien",
+  "l": 1,
+  "k": "Sydamerika",
+  "a": [
+   "brasiliansk"
+  ],
+  "f": "Där spelar alla fotboll och det finns djungel med papegojor.",
+  "p": "",
+  "ar": 1.4286
+ },
+ {
+  "c": "gr",
+  "n": "Grekland",
+  "l": 1,
+  "k": "Europa",
+  "a": [
+   "grekisk",
+   "grekiska"
+  ],
+  "f": "Där finns vita hus och ett jättefint blått hav.",
+  "p": "",
+  "ar": 1.5
+ },
+ {
+  "c": "nl",
+  "n": "Nederländerna",
+  "l": 1,
+  "k": "Europa",
+  "a": [
+   "holland",
+   "holländsk",
+   "nederländsk"
+  ],
+  "f": "Där finns väderkvarnar och massor av tulpaner.",
+  "p": "",
+  "ar": 1.5
+ },
+ {
+  "c": "ch",
+  "n": "Schweiz",
+  "l": 1,
+  "k": "Europa",
+  "a": [
+   "schweizisk",
+   "svejts"
+  ],
+  "f": "Där gör man god choklad. Flaggan är fyrkantig!",
+  "p": "",
+  "ar": 1.0
+ },
+ {
+  "c": "pl",
+  "n": "Polen",
+  "l": 1,
+  "k": "Europa",
+  "a": [
+   "polsk",
+   "polska"
+  ],
+  "f": "Det ligger på andra sidan havet, söder om Sverige.",
+  "p": "",
+  "ar": 1.6
+ },
+ {
+  "c": "ua",
+  "n": "Ukraina",
+  "l": 1,
+  "k": "Europa",
+  "a": [
+   "ukrainsk"
+  ],
+  "f": "Flaggan är blå som himlen och gul som ett sädesfält.",
+  "p": "",
+  "ar": 1.5
+ },
+ {
+  "c": "tr",
+  "n": "Turkiet",
+  "l": 1,
+  "k": "Asien",
+  "a": [
+   "turkisk"
+  ],
+  "f": "Flaggan har en måne och en stjärna.",
+  "p": "",
+  "ar": 1.5
+ },
+ {
+  "c": "in",
+  "n": "Indien",
+  "l": 1,
+  "k": "Asien",
+  "a": [
+   "indisk"
+  ],
+  "f": "Där finns tigrar och elefanter.",
+  "p": "",
+  "ar": 1.5
+ },
+ {
+  "c": "au",
+  "n": "Australien",
+  "l": 1,
+  "k": "Oceanien",
+  "a": [
+   "australisk"
+  ],
+  "f": "Där hoppar kängurur!",
+  "p": "",
+  "ar": 2.0
+ },
+ {
+  "c": "mx",
+  "n": "Mexiko",
+  "l": 1,
+  "k": "Nordamerika",
+  "a": [
+   "mexikansk",
+   "mexico"
+  ],
+  "f": "Där växer kaktusar. Flaggan har en örn.",
+  "p": "",
+  "ar": 1.75
+ },
+ {
+  "c": "ie",
+  "n": "Irland",
+  "l": 1,
+  "k": "Europa",
+  "a": [
+   "irländsk"
+  ],
+  "f": "Där är allt så grönt, och man letar efter fyrklöver.",
+  "p": "",
+  "ar": 2.0
+ },
+ {
+  "c": "kr",
+  "n": "Sydkorea",
+  "l": 1,
+  "k": "Asien",
+  "a": [
+   "syd korea",
+   "sydkoreansk"
+  ],
+  "f": "Flaggan har en röd och blå cirkel och svarta streck.",
+  "p": "",
+  "ar": 1.5
+ },
+ {
+  "c": "pt",
+  "n": "Portugal",
+  "l": 2,
+  "k": "Europa",
+  "a": [
+   "portugisisk"
+  ],
+  "f": "Det ligger längst bort i Europa, vid havet bredvid Spanien.",
+  "p": "",
+  "ar": 1.5
+ },
+ {
+  "c": "be",
+  "n": "Belgien",
+  "l": 2,
+  "k": "Europa",
+  "a": [
+   "belgisk"
+  ],
+  "f": "Där gör man våfflor och choklad.",
+  "p": "",
+  "ar": 1.1538
+ },
+ {
+  "c": "at",
+  "n": "Österrike",
+  "l": 2,
+  "k": "Europa",
+  "a": [
+   "österrikisk"
+  ],
+  "f": "Där finns höga berg och man åker mycket skidor.",
+  "p": "",
+  "ar": 1.5
+ },
+ {
+  "c": "ee",
+  "n": "Estland",
+  "l": 2,
+  "k": "Europa",
+  "a": [
+   "estnisk"
+  ],
+  "f": "Det ligger på andra sidan Östersjön.",
+  "p": "",
+  "ar": 1.5714
+ },
+ {
+  "c": "lv",
+  "n": "Lettland",
+  "l": 2,
+  "k": "Europa",
+  "a": [
+   "lettisk"
+  ],
+  "f": "Det ligger mellan Estland och Litauen. Flaggan är mörkröd och vit.",
+  "p": "",
+  "ar": 2.0
+ },
+ {
+  "c": "lt",
+  "n": "Litauen",
+  "l": 2,
+  "k": "Europa",
+  "a": [
+   "litauisk"
+  ],
+  "f": "Flaggan är gul, grön och röd.",
+  "p": "",
+  "ar": 1.6667
+ },
+ {
+  "c": "cz",
+  "n": "Tjeckien",
+  "l": 2,
+  "k": "Europa",
+  "a": [
+   "tjeckisk"
+  ],
+  "f": "Flaggan har en blå triangel.",
+  "p": "",
+  "ar": 1.5
+ },
+ {
+  "c": "hu",
+  "n": "Ungern",
+  "l": 2,
+  "k": "Europa",
+  "a": [
+   "ungersk"
+  ],
+  "f": "Flaggan är röd, vit och grön, uppifrån och ner.",
+  "p": "",
+  "ar": 2.0
+ },
+ {
+  "c": "hr",
+  "n": "Kroatien",
+  "l": 2,
+  "k": "Europa",
+  "a": [
+   "kroatisk"
+  ],
+  "f": "Flaggan har ett rutigt mönster som ett schackbräde.",
+  "p": "",
+  "ar": 2.0
+ },
+ {
+  "c": "ro",
+  "n": "Rumänien",
+  "l": 2,
+  "k": "Europa",
+  "a": [
+   "rumänsk"
+  ],
+  "f": "Flaggan är blå, gul och röd.",
+  "p": "",
+  "ar": 1.5
+ },
+ {
+  "c": "bg",
+  "n": "Bulgarien",
+  "l": 2,
+  "k": "Europa",
+  "a": [
+   "bulgarisk"
+  ],
+  "f": "Flaggan är vit, grön och röd.",
+  "p": "",
+  "ar": 1.6667
+ },
+ {
+  "c": "rs",
+  "n": "Serbien",
+  "l": 2,
+  "k": "Europa",
+  "a": [
+   "serbisk"
+  ],
+  "f": "Flaggan har en örn med två huvuden.",
+  "p": "",
+  "ar": 1.5
+ },
+ {
+  "c": "sk",
+  "n": "Slovakien",
+  "l": 2,
+  "k": "Europa",
+  "a": [
+   "slovakisk"
+  ],
+  "f": "Flaggan har ett vapen med ett dubbelt kors.",
+  "p": "",
+  "ar": 1.5
+ },
+ {
+  "c": "si",
+  "n": "Slovenien",
+  "l": 2,
+  "k": "Europa",
+  "a": [
+   "slovensk"
+  ],
+  "f": "Flaggan har ett berg med tre toppar.",
+  "p": "",
+  "ar": 2.0
+ },
+ {
+  "c": "lu",
+  "n": "Luxemburg",
+  "l": 2,
+  "k": "Europa",
+  "a": [],
+  "f": "Det är ett väldigt litet land mitt i Europa.",
+  "p": "",
+  "ar": 1.6667
+ },
+ {
+  "c": "ru",
+  "n": "Ryssland",
+  "l": 2,
+  "k": "Europa och Asien",
+  "a": [
+   "rysk"
+  ],
+  "f": "Det är världens största land!",
+  "p": "",
+  "ar": 1.5
+ },
+ {
+  "c": "ar",
+  "n": "Argentina",
+  "l": 2,
+  "k": "Sydamerika",
+  "a": [
+   "argentinsk"
+  ],
+  "f": "Flaggan har en sol i mitten.",
+  "p": "",
+  "ar": 1.6
+ },
+ {
+  "c": "cl",
+  "n": "Chile",
+  "l": 2,
+  "k": "Sydamerika",
+  "a": [
+   "chilensk"
+  ],
+  "f": "Det är ett jättelångt och smalt land.",
+  "p": "",
+  "ar": 1.5
+ },
+ {
+  "c": "co",
+  "n": "Colombia",
+  "l": 2,
+  "k": "Sydamerika",
+  "a": [
+   "colombiansk",
+   "kolombia"
+  ],
+  "f": "Där odlar man mycket kaffe.",
+  "p": "",
+  "ar": 1.5
+ },
+ {
+  "c": "pe",
+  "n": "Peru",
+  "l": 2,
+  "k": "Sydamerika",
+  "a": [
+   "peruansk"
+  ],
+  "f": "Där bor lamor högt uppe i bergen.",
+  "p": "",
+  "ar": 1.5
+ },
+ {
+  "c": "ve",
+  "n": "Venezuela",
+  "l": 2,
+  "k": "Sydamerika",
+  "a": [],
+  "f": "Där finns världens högsta vattenfall.",
+  "p": "",
+  "ar": 1.5
+ },
+ {
+  "c": "cu",
+  "n": "Kuba",
+  "l": 2,
+  "k": "Nordamerika",
+  "a": [
+   "kubansk",
+   "cuba"
+  ],
+  "f": "Det är en varm ö med gamla färgglada bilar.",
+  "p": "",
+  "ar": 2.0
+ },
+ {
+  "c": "jm",
+  "n": "Jamaica",
+  "l": 2,
+  "k": "Nordamerika",
+  "a": [
+   "jamaika"
+  ],
+  "f": "Det är en varm ö med stränder och palmer.",
+  "p": "",
+  "ar": 2.0
+ },
+ {
+  "c": "eg",
+  "n": "Egypten",
+  "l": 2,
+  "k": "Afrika",
+  "a": [
+   "egyptisk"
+  ],
+  "f": "Där finns pyramiderna!",
+  "p": "",
+  "ar": 1.5
+ },
+ {
+  "c": "za",
+  "n": "Sydafrika",
+  "l": 2,
+  "k": "Afrika",
+  "a": [
+   "syd afrika",
+   "sydafrikansk"
+  ],
+  "f": "Där kan man se lejon, elefanter och pingviner.",
+  "p": "",
+  "ar": 1.5
+ },
+ {
+  "c": "ke",
+  "n": "Kenya",
+  "l": 2,
+  "k": "Afrika",
+  "a": [
+   "kenia",
+   "kenyansk"
+  ],
+  "f": "Där springer giraffer och zebror på savannen.",
+  "p": "",
+  "ar": 1.5
+ },
+ {
+  "c": "ng",
+  "n": "Nigeria",
+  "l": 2,
+  "k": "Afrika",
+  "a": [
+   "nigeriansk"
+  ],
+  "f": "Flaggan är grön, vit och grön.",
+  "p": "",
+  "ar": 2.0
+ },
+ {
+  "c": "ma",
+  "n": "Marocko",
+  "l": 2,
+  "k": "Afrika",
+  "a": [
+   "marockansk"
+  ],
+  "f": "Flaggan är röd med en grön stjärna.",
+  "p": "",
+  "ar": 1.5
+ },
+ {
+  "c": "tz",
+  "n": "Tanzania",
+  "l": 2,
+  "k": "Afrika",
+  "a": [],
+  "f": "Där ligger Afrikas högsta berg.",
+  "p": "",
+  "ar": 1.5
+ },
+ {
+  "c": "mg",
+  "n": "Madagaskar",
+  "l": 2,
+  "k": "Afrika",
+  "a": [],
+  "f": "Där bor lemurer!",
+  "p": "",
+  "ar": 1.5
+ },
+ {
+  "c": "et",
+  "n": "Etiopien",
+  "l": 2,
+  "k": "Afrika",
+  "a": [
+   "etiopisk"
+  ],
+  "f": "Där kommer kaffet ifrån.",
+  "p": "",
+  "ar": 2.0
+ },
+ {
+  "c": "gh",
+  "n": "Ghana",
+  "l": 2,
+  "k": "Afrika",
+  "a": [
+   "ghanansk"
+  ],
+  "f": "Flaggan har en svart stjärna i mitten.",
+  "p": "",
+  "ar": 1.5
+ },
+ {
+  "c": "tn",
+  "n": "Tunisien",
+  "l": 2,
+  "k": "Afrika",
+  "a": [],
+  "f": "Flaggan är röd med en måne och en stjärna i en vit cirkel.",
+  "p": "",
+  "ar": 1.5
+ },
+ {
+  "c": "dz",
+  "n": "Algeriet",
+  "l": 2,
+  "k": "Afrika",
+  "a": [],
+  "f": "Det är Afrikas största land.",
+  "p": "",
+  "ar": 1.5
+ },
+ {
+  "c": "sa",
+  "n": "Saudiarabien",
+  "l": 2,
+  "k": "Asien",
+  "a": [
+   "saudi arabien",
+   "saudi"
+  ],
+  "f": "Där finns stora öknar med kameler.",
+  "p": "",
+  "ar": 1.5
+ },
+ {
+  "c": "il",
+  "n": "Israel",
+  "l": 2,
+  "k": "Asien",
+  "a": [
+   "israelisk"
+  ],
+  "f": "Flaggan har en blå stjärna med sex uddar.",
+  "p": "",
+  "ar": 1.375
+ },
+ {
+  "c": "ir",
+  "n": "Iran",
+  "l": 2,
+  "k": "Asien",
+  "a": [
+   "iransk"
+  ],
+  "f": "Där gör man fina mattor.",
+  "p": "",
+  "ar": 1.75
+ },
+ {
+  "c": "pk",
+  "n": "Pakistan",
+  "l": 2,
+  "k": "Asien",
+  "a": [
+   "pakistansk"
+  ],
+  "f": "Flaggan är grön med en vit måne och en stjärna.",
+  "p": "",
+  "ar": 1.5
+ },
+ {
+  "c": "id",
+  "n": "Indonesien",
+  "l": 2,
+  "k": "Asien",
+  "a": [
+   "indonesisk"
+  ],
+  "f": "Det är ett land med tusentals öar.",
+  "p": "",
+  "ar": 1.5
+ },
+ {
+  "c": "ph",
+  "n": "Filippinerna",
+  "l": 2,
+  "k": "Asien",
+  "a": [
+   "filippinsk"
+  ],
+  "f": "Flaggan har en sol och tre stjärnor.",
+  "p": "",
+  "ar": 2.0
+ },
+ {
+  "c": "th",
+  "n": "Thailand",
+  "l": 2,
+  "k": "Asien",
+  "a": [
+   "thailändsk"
+  ],
+  "f": "Där finns elefanter och fina stränder.",
+  "p": "",
+  "ar": 1.5
+ },
+ {
+  "c": "vn",
+  "n": "Vietnam",
+  "l": 2,
+  "k": "Asien",
+  "a": [
+   "vietnamesisk"
+  ],
+  "f": "Flaggan är röd med en gul stjärna.",
+  "p": "",
+  "ar": 1.5
+ },
+ {
+  "c": "kp",
+  "n": "Nordkorea",
+  "l": 2,
+  "k": "Asien",
+  "a": [
+   "nord korea"
+  ],
+  "f": "Flaggan har en röd stjärna i en vit cirkel.",
+  "p": "",
+  "ar": 2.0
+ },
+ {
+  "c": "mn",
+  "n": "Mongoliet",
+  "l": 2,
+  "k": "Asien",
+  "a": [
+   "mongolisk"
+  ],
+  "f": "Där bor man i runda tält som heter jurtor.",
+  "p": "",
+  "ar": 2.0
+ },
+ {
+  "c": "np",
+  "n": "Nepal",
+  "l": 2,
+  "k": "Asien",
+  "a": [
+   "nepalesisk"
+  ],
+  "f": "Där ligger världens högsta berg. Flaggan är inte fyrkantig!",
+  "p": "",
+  "ar": 0.8203
+ },
+ {
+  "c": "bd",
+  "n": "Bangladesh",
+  "l": 2,
+  "k": "Asien",
+  "a": [],
+  "f": "Flaggan är grön med en röd cirkel.",
+  "p": "",
+  "ar": 1.6667
+ },
+ {
+  "c": "sg",
+  "n": "Singapore",
+  "l": 2,
+  "k": "Asien",
+  "a": [
+   "singapur"
+  ],
+  "f": "En stad som också är ett helt land.",
+  "p": "",
+  "ar": 1.5
+ },
+ {
+  "c": "my",
+  "n": "Malaysia",
+  "l": 2,
+  "k": "Asien",
+  "a": [],
+  "f": "Där bor orangutanger i regnskogen.",
+  "p": "",
+  "ar": 2.0
+ },
+ {
+  "c": "lk",
+  "n": "Sri Lanka",
+  "l": 2,
+  "k": "Asien",
+  "a": [
+   "srilanka"
+  ],
+  "f": "En ö som ser ut som en droppe. Där odlar man te.",
+  "p": "",
+  "ar": 2.0
+ },
+ {
+  "c": "ae",
+  "n": "Förenade Arabemiraten",
+  "l": 2,
+  "k": "Asien",
+  "a": [
+   "arabemiraten",
+   "emiraten"
+  ],
+  "f": "Där finns världens högsta hus.",
+  "p": "",
+  "ar": 2.0
+ },
+ {
+  "c": "qa",
+  "n": "Qatar",
+  "l": 2,
+  "k": "Asien",
+  "a": [
+   "katar"
+  ],
+  "f": "Flaggan är vit och vinröd med en sicksack.",
+  "p": "",
+  "ar": 2.5455
+ },
+ {
+  "c": "nz",
+  "n": "Nya Zeeland",
+  "l": 2,
+  "k": "Oceanien",
+  "a": [
+   "nyzeeland"
+  ],
+  "f": "Där bor fågeln kiwi.",
+  "p": "",
+  "ar": 2.0
+ },
+ {
+  "c": "gl",
+  "n": "Grönland",
+  "l": 2,
+  "k": "Nordamerika",
+  "a": [
+   "grönländsk"
+  ],
+  "f": "Där är det jättekallt, med is och isbjörnar.",
+  "p": "dk",
+  "ar": 1.5
+ },
+ {
+  "c": "fo",
+  "n": "Färöarna",
+  "l": 2,
+  "k": "Europa",
+  "a": [
+   "färöisk",
+   "färöarne"
+  ],
+  "f": "Små öar ute i havet där det bor massor av får.",
+  "p": "dk",
+  "ar": 1.375
+ },
+ {
+  "c": "ax",
+  "n": "Åland",
+  "l": 2,
+  "k": "Europa",
+  "a": [
+   "åländsk"
+  ],
+  "f": "Öar mellan Sverige och Finland.",
+  "p": "fi",
+  "ar": 1.5294
+ },
+ {
+  "c": "gb-eng",
+  "n": "England",
+  "l": 2,
+  "k": "Europa",
+  "a": [
+   "engelsk"
+  ],
+  "f": "Där ligger London. Flaggan har ett rött kors.",
+  "p": "gb",
+  "ar": 1.6667
+ },
+ {
+  "c": "gb-sct",
+  "n": "Skottland",
+  "l": 2,
+  "k": "Europa",
+  "a": [
+   "skotsk"
+  ],
+  "f": "Där spelar man säckpipa.",
+  "p": "gb",
+  "ar": 1.6667
+ },
+ {
+  "c": "gb-wls",
+  "n": "Wales",
+  "l": 2,
+  "k": "Europa",
+  "a": [
+   "walesisk"
+  ],
+  "f": "Flaggan har en röd drake!",
+  "p": "gb",
+  "ar": 1.6667
+ },
+ {
+  "c": "al",
+  "n": "Albanien",
+  "l": 2,
+  "k": "Europa",
+  "a": [
+   "albansk"
+  ],
+  "f": "Flaggan har en svart örn med två huvuden.",
+  "p": "",
+  "ar": 1.4
+ },
+ {
+  "c": "ba",
+  "n": "Bosnien och Hercegovina",
+  "l": 2,
+  "k": "Europa",
+  "a": [
+   "bosnien"
+  ],
+  "f": "Flaggan har en gul triangel och vita stjärnor.",
+  "p": "",
+  "ar": 2.0
+ },
+ {
+  "c": "me",
+  "n": "Montenegro",
+  "l": 2,
+  "k": "Europa",
+  "a": [],
+  "f": "Flaggan har en guldkant och en örn.",
+  "p": "",
+  "ar": 2.0
+ },
+ {
+  "c": "mk",
+  "n": "Nordmakedonien",
+  "l": 2,
+  "k": "Europa",
+  "a": [
+   "makedonien",
+   "nord makedonien"
+  ],
+  "f": "Flaggan har en gul sol med långa strålar.",
+  "p": "",
+  "ar": 2.0
+ },
+ {
+  "c": "md",
+  "n": "Moldavien",
+  "l": 2,
+  "k": "Europa",
+  "a": [
+   "moldova"
+  ],
+  "f": "Flaggan liknar Rumäniens, men har ett vapen i mitten.",
+  "p": "",
+  "ar": 2.0
+ },
+ {
+  "c": "by",
+  "n": "Belarus",
+  "l": 2,
+  "k": "Europa",
+  "a": [
+   "vitryssland"
+  ],
+  "f": "Flaggan är röd och grön, med ett mönster längs kanten.",
+  "p": "",
+  "ar": 2.0
+ },
+ {
+  "c": "ge",
+  "n": "Georgien",
+  "l": 2,
+  "k": "Asien",
+  "a": [],
+  "f": "Flaggan har fem röda kors.",
+  "p": "",
+  "ar": 1.5
+ },
+ {
+  "c": "am",
+  "n": "Armenien",
+  "l": 2,
+  "k": "Asien",
+  "a": [
+   "armenisk"
+  ],
+  "f": "Flaggan är röd, blå och orange.",
+  "p": "",
+  "ar": 2.0
+ },
+ {
+  "c": "az",
+  "n": "Azerbajdzjan",
+  "l": 2,
+  "k": "Asien",
+  "a": [
+   "azerbajdjan",
+   "azerbaijan"
+  ],
+  "f": "Flaggan har en vit måne och en stjärna på rött.",
+  "p": "",
+  "ar": 2.0
+ },
+ {
+  "c": "cy",
+  "n": "Cypern",
+  "l": 2,
+  "k": "Europa",
+  "a": [
+   "cypriotisk"
+  ],
+  "f": "Flaggan har en karta över ön.",
+  "p": "",
+  "ar": 1.5
+ },
+ {
+  "c": "mt",
+  "n": "Malta",
+  "l": 2,
+  "k": "Europa",
+  "a": [
+   "maltesisk"
+  ],
+  "f": "En liten ö i Medelhavet.",
+  "p": "",
+  "ar": 1.5
+ },
+ {
+  "c": "mc",
+  "n": "Monaco",
+  "l": 2,
+  "k": "Europa",
+  "a": [],
+  "f": "Ett pyttelitet land där bilar kör race på gatorna.",
+  "p": "",
+  "ar": 1.25
+ },
+ {
+  "c": "li",
+  "n": "Liechtenstein",
+  "l": 2,
+  "k": "Europa",
+  "a": [],
+  "f": "Ett pyttelitet land bland bergen.",
+  "p": "",
+  "ar": 1.6667
+ },
+ {
+  "c": "sm",
+  "n": "San Marino",
+  "l": 2,
+  "k": "Europa",
+  "a": [],
+  "f": "Ett pyttelitet land som ligger inuti Italien.",
+  "p": "",
+  "ar": 1.3333
+ },
+ {
+  "c": "va",
+  "n": "Vatikanstaten",
+  "l": 2,
+  "k": "Europa",
+  "a": [
+   "vatikanen"
+  ],
+  "f": "Världens minsta land! Där bor påven.",
+  "p": "",
+  "ar": 1.0
+ },
+ {
+  "c": "ad",
+  "n": "Andorra",
+  "l": 2,
+  "k": "Europa",
+  "a": [],
+  "f": "Ett litet land i bergen mellan Frankrike och Spanien.",
+  "p": "",
+  "ar": 1.4286
+ },
+ {
+  "c": "xk",
+  "n": "Kosovo",
+  "l": 3,
+  "k": "Europa",
+  "a": [],
+  "f": "",
+  "p": "",
+  "ar": 1.4
+ },
+ {
+  "c": "kz",
+  "n": "Kazakstan",
+  "l": 2,
+  "k": "Asien",
+  "a": [
+   "kazakhstan"
+  ],
+  "f": "Flaggan har en örn under en sol.",
+  "p": "",
+  "ar": 2.0
+ },
+ {
+  "c": "uy",
+  "n": "Uruguay",
+  "l": 2,
+  "k": "Sydamerika",
+  "a": [],
+  "f": "Flaggan har en sol med ett ansikte.",
+  "p": "",
+  "ar": 1.5
+ },
+ {
+  "c": "py",
+  "n": "Paraguay",
+  "l": 2,
+  "k": "Sydamerika",
+  "a": [],
+  "f": "Flaggan ser olika ut på fram- och baksidan.",
+  "p": "",
+  "ar": 1.8182
+ },
+ {
+  "c": "bo",
+  "n": "Bolivia",
+  "l": 2,
+  "k": "Sydamerika",
+  "a": [],
+  "f": "Där finns en jättestor sjö högt uppe i bergen.",
+  "p": "",
+  "ar": 1.4666
+ },
+ {
+  "c": "ec",
+  "n": "Ecuador",
+  "l": 2,
+  "k": "Sydamerika",
+  "a": [],
+  "f": "Där bor jättesköldpaddor.",
+  "p": "",
+  "ar": 1.5
+ },
+ {
+  "c": "cr",
+  "n": "Costa Rica",
+  "l": 2,
+  "k": "Nordamerika",
+  "a": [
+   "costarica"
+  ],
+  "f": "Där finns sengångare i regnskogen.",
+  "p": "",
+  "ar": 1.6667
+ },
+ {
+  "c": "pa",
+  "n": "Panama",
+  "l": 2,
+  "k": "Nordamerika",
+  "a": [],
+  "f": "Där finns en kanal där jättestora båtar åker.",
+  "p": "",
+  "ar": 1.5
+ },
+ {
+  "c": "do",
+  "n": "Dominikanska republiken",
+  "l": 2,
+  "k": "Nordamerika",
+  "a": [
+   "dominikanska"
+  ],
+  "f": "En varm ö där man spelar mycket baseboll.",
+  "p": "",
+  "ar": 1.5
+ },
+ {
+  "c": "ht",
+  "n": "Haiti",
+  "l": 2,
+  "k": "Nordamerika",
+  "a": [],
+  "f": "Det delar ö med Dominikanska republiken.",
+  "p": "",
+  "ar": 1.6667
+ },
+ {
+  "c": "mv",
+  "n": "Maldiverna",
+  "l": 3,
+  "k": "Asien",
+  "a": [],
+  "f": "Små öar i havet med vita stränder.",
+  "p": "",
+  "ar": 1.5
+ },
+ {
+  "c": "bh",
+  "n": "Bahrain",
+  "l": 3,
+  "k": "Asien",
+  "a": [],
+  "f": "",
+  "p": "",
+  "ar": 1.6667
+ },
+ {
+  "c": "bt",
+  "n": "Bhutan",
+  "l": 3,
+  "k": "Asien",
+  "a": [],
+  "f": "Flaggan har en vit drake.",
+  "p": "",
+  "ar": 1.5
+ },
+ {
+  "c": "bn",
+  "n": "Brunei",
+  "l": 3,
+  "k": "Asien",
+  "a": [],
+  "f": "",
+  "p": "",
+  "ar": 2.0
+ },
+ {
+  "c": "kh",
+  "n": "Kambodja",
+  "l": 3,
+  "k": "Asien",
+  "a": [
+   "kambodia",
+   "cambodia"
+  ],
+  "f": "Flaggan har ett stort tempel.",
+  "p": "",
+  "ar": 1.5625
+ },
+ {
+  "c": "iq",
+  "n": "Irak",
+  "l": 3,
+  "k": "Asien",
+  "a": [
+   "iraq"
+  ],
+  "f": "",
+  "p": "",
+  "ar": 1.5
+ },
+ {
+  "c": "jo",
+  "n": "Jordanien",
+  "l": 3,
+  "k": "Asien",
+  "a": [],
+  "f": "",
+  "p": "",
+  "ar": 2.0
+ },
+ {
+  "c": "kg",
+  "n": "Kirgizistan",
+  "l": 3,
+  "k": "Asien",
+  "a": [
+   "kirgistan"
+  ],
+  "f": "",
+  "p": "",
+  "ar": 1.6667
+ },
+ {
+  "c": "la",
+  "n": "Laos",
+  "l": 3,
+  "k": "Asien",
+  "a": [],
+  "f": "",
+  "p": "",
+  "ar": 1.5
+ },
+ {
+  "c": "lb",
+  "n": "Libanon",
+  "l": 3,
+  "k": "Asien",
+  "a": [],
+  "f": "Flaggan har ett grönt träd.",
+  "p": "",
+  "ar": 1.5
+ },
+ {
+  "c": "mm",
+  "n": "Myanmar",
+  "l": 3,
+  "k": "Asien",
+  "a": [
+   "burma"
+  ],
+  "f": "",
+  "p": "",
+  "ar": 1.5
+ },
+ {
+  "c": "om",
+  "n": "Oman",
+  "l": 3,
+  "k": "Asien",
+  "a": [],
+  "f": "",
+  "p": "",
+  "ar": 2.0
+ },
+ {
+  "c": "tl",
+  "n": "Östtimor",
+  "l": 3,
+  "k": "Asien",
+  "a": [
+   "öst timor",
+   "timor"
+  ],
+  "f": "",
+  "p": "",
+  "ar": 2.0
+ },
+ {
+  "c": "tj",
+  "n": "Tadzjikistan",
+  "l": 3,
+  "k": "Asien",
+  "a": [
+   "tadjikistan",
+   "tadzjikistan"
+  ],
+  "f": "",
+  "p": "",
+  "ar": 2.0
+ },
+ {
+  "c": "tm",
+  "n": "Turkmenistan",
+  "l": 3,
+  "k": "Asien",
+  "a": [],
+  "f": "",
+  "p": "",
+  "ar": 1.5
+ },
+ {
+  "c": "uz",
+  "n": "Uzbekistan",
+  "l": 3,
+  "k": "Asien",
+  "a": [],
+  "f": "",
+  "p": "",
+  "ar": 2.0
+ },
+ {
+  "c": "ye",
+  "n": "Jemen",
+  "l": 3,
+  "k": "Asien",
+  "a": [
+   "yemen"
+  ],
+  "f": "",
+  "p": "",
+  "ar": 1.5
+ },
+ {
+  "c": "kw",
+  "n": "Kuwait",
+  "l": 3,
+  "k": "Asien",
+  "a": [],
+  "f": "",
+  "p": "",
+  "ar": 2.0
+ },
+ {
+  "c": "ao",
+  "n": "Angola",
+  "l": 3,
+  "k": "Afrika",
+  "a": [],
+  "f": "",
+  "p": "",
+  "ar": 1.5
+ },
+ {
+  "c": "bj",
+  "n": "Benin",
+  "l": 3,
+  "k": "Afrika",
+  "a": [],
+  "f": "",
+  "p": "",
+  "ar": 1.5
+ },
+ {
+  "c": "bw",
+  "n": "Botswana",
+  "l": 3,
+  "k": "Afrika",
+  "a": [],
+  "f": "",
+  "p": "",
+  "ar": 1.5
+ },
+ {
+  "c": "bf",
+  "n": "Burkina Faso",
+  "l": 3,
+  "k": "Afrika",
+  "a": [
+   "burkina"
+  ],
+  "f": "",
+  "p": "",
+  "ar": 1.5
+ },
+ {
+  "c": "bi",
+  "n": "Burundi",
+  "l": 3,
+  "k": "Afrika",
+  "a": [],
+  "f": "",
+  "p": "",
+  "ar": 1.6667
+ },
+ {
+  "c": "cm",
+  "n": "Kamerun",
+  "l": 3,
+  "k": "Afrika",
+  "a": [],
+  "f": "",
+  "p": "",
+  "ar": 1.5
+ },
+ {
+  "c": "cv",
+  "n": "Kap Verde",
+  "l": 3,
+  "k": "Afrika",
+  "a": [
+   "kapverde"
+  ],
+  "f": "",
+  "p": "",
+  "ar": 1.7
+ },
+ {
+  "c": "cf",
+  "n": "Centralafrikanska republiken",
+  "l": 3,
+  "k": "Afrika",
+  "a": [
+   "centralafrika"
+  ],
+  "f": "",
+  "p": "",
+  "ar": 1.5
+ },
+ {
+  "c": "td",
+  "n": "Tchad",
+  "l": 3,
+  "k": "Afrika",
+  "a": [
+   "tchad",
+   "chad"
+  ],
+  "f": "",
+  "p": "",
+  "ar": 1.5
+ },
+ {
+  "c": "km",
+  "n": "Komorerna",
+  "l": 3,
+  "k": "Afrika",
+  "a": [
+   "komorerna"
+  ],
+  "f": "",
+  "p": "",
+  "ar": 1.6667
+ },
+ {
+  "c": "cg",
+  "n": "Kongo-Brazzaville",
+  "l": 3,
+  "k": "Afrika",
+  "a": [
+   "kongo",
+   "brazzaville",
+   "republiken kongo"
+  ],
+  "f": "",
+  "p": "",
+  "ar": 1.5
+ },
+ {
+  "c": "cd",
+  "n": "Kongo-Kinshasa",
+  "l": 3,
+  "k": "Afrika",
+  "a": [
+   "kongo",
+   "kinshasa",
+   "demokratiska republiken kongo"
+  ],
+  "f": "",
+  "p": "",
+  "ar": 1.3333
+ },
+ {
+  "c": "dj",
+  "n": "Djibouti",
+  "l": 3,
+  "k": "Afrika",
+  "a": [
+   "djibuti"
+  ],
+  "f": "",
+  "p": "",
+  "ar": 1.5
+ },
+ {
+  "c": "gq",
+  "n": "Ekvatorialguinea",
+  "l": 3,
+  "k": "Afrika",
+  "a": [
+   "ekvatorial guinea"
+  ],
+  "f": "",
+  "p": "",
+  "ar": 1.5
+ },
+ {
+  "c": "er",
+  "n": "Eritrea",
+  "l": 3,
+  "k": "Afrika",
+  "a": [],
+  "f": "",
+  "p": "",
+  "ar": 2.0
+ },
+ {
+  "c": "sz",
+  "n": "Eswatini",
+  "l": 3,
+  "k": "Afrika",
+  "a": [
+   "swaziland"
+  ],
+  "f": "",
+  "p": "",
+  "ar": 1.5
+ },
+ {
+  "c": "ga",
+  "n": "Gabon",
+  "l": 3,
+  "k": "Afrika",
+  "a": [],
+  "f": "",
+  "p": "",
+  "ar": 1.3333
+ },
+ {
+  "c": "gm",
+  "n": "Gambia",
+  "l": 3,
+  "k": "Afrika",
+  "a": [],
+  "f": "",
+  "p": "",
+  "ar": 1.5
+ },
+ {
+  "c": "gn",
+  "n": "Guinea",
+  "l": 3,
+  "k": "Afrika",
+  "a": [],
+  "f": "",
+  "p": "",
+  "ar": 1.5
+ },
+ {
+  "c": "gw",
+  "n": "Guinea-Bissau",
+  "l": 3,
+  "k": "Afrika",
+  "a": [
+   "bissau"
+  ],
+  "f": "",
+  "p": "",
+  "ar": 2.0
+ },
+ {
+  "c": "ci",
+  "n": "Elfenbenskusten",
+  "l": 3,
+  "k": "Afrika",
+  "a": [
+   "elfenbens kusten"
+  ],
+  "f": "",
+  "p": "",
+  "ar": 1.5
+ },
+ {
+  "c": "ls",
+  "n": "Lesotho",
+  "l": 3,
+  "k": "Afrika",
+  "a": [],
+  "f": "",
+  "p": "",
+  "ar": 1.5
+ },
+ {
+  "c": "lr",
+  "n": "Liberia",
+  "l": 3,
+  "k": "Afrika",
+  "a": [],
+  "f": "",
+  "p": "",
+  "ar": 1.9
+ },
+ {
+  "c": "ly",
+  "n": "Libyen",
+  "l": 3,
+  "k": "Afrika",
+  "a": [
+   "libya"
+  ],
+  "f": "",
+  "p": "",
+  "ar": 2.0
+ },
+ {
+  "c": "mw",
+  "n": "Malawi",
+  "l": 3,
+  "k": "Afrika",
+  "a": [],
+  "f": "",
+  "p": "",
+  "ar": 1.5
+ },
+ {
+  "c": "ml",
+  "n": "Mali",
+  "l": 3,
+  "k": "Afrika",
+  "a": [],
+  "f": "",
+  "p": "",
+  "ar": 1.5
+ },
+ {
+  "c": "mr",
+  "n": "Mauretanien",
+  "l": 3,
+  "k": "Afrika",
+  "a": [],
+  "f": "",
+  "p": "",
+  "ar": 1.5
+ },
+ {
+  "c": "mu",
+  "n": "Mauritius",
+  "l": 3,
+  "k": "Afrika",
+  "a": [],
+  "f": "",
+  "p": "",
+  "ar": 1.5
+ },
+ {
+  "c": "mz",
+  "n": "Moçambique",
+  "l": 3,
+  "k": "Afrika",
+  "a": [
+   "mocambique",
+   "mozambique"
+  ],
+  "f": "",
+  "p": "",
+  "ar": 1.5
+ },
+ {
+  "c": "na",
+  "n": "Namibia",
+  "l": 3,
+  "k": "Afrika",
+  "a": [],
+  "f": "",
+  "p": "",
+  "ar": 1.5
+ },
+ {
+  "c": "ne",
+  "n": "Niger",
+  "l": 3,
+  "k": "Afrika",
+  "a": [],
+  "f": "",
+  "p": "",
+  "ar": 1.1667
+ },
+ {
+  "c": "rw",
+  "n": "Rwanda",
+  "l": 3,
+  "k": "Afrika",
+  "a": [
+   "ruanda"
+  ],
+  "f": "",
+  "p": "",
+  "ar": 1.5
+ },
+ {
+  "c": "st",
+  "n": "São Tomé och Príncipe",
+  "l": 3,
+  "k": "Afrika",
+  "a": [
+   "sao tome"
+  ],
+  "f": "",
+  "p": "",
+  "ar": 2.0
+ },
+ {
+  "c": "sn",
+  "n": "Senegal",
+  "l": 3,
+  "k": "Afrika",
+  "a": [],
+  "f": "",
+  "p": "",
+  "ar": 1.5
+ },
+ {
+  "c": "sc",
+  "n": "Seychellerna",
+  "l": 3,
+  "k": "Afrika",
+  "a": [
+   "seychellerna"
+  ],
+  "f": "",
+  "p": "",
+  "ar": 2.0
+ },
+ {
+  "c": "sl",
+  "n": "Sierra Leone",
+  "l": 3,
+  "k": "Afrika",
+  "a": [
+   "sierraleone"
+  ],
+  "f": "",
+  "p": "",
+  "ar": 1.5
+ },
+ {
+  "c": "so",
+  "n": "Somalia",
+  "l": 3,
+  "k": "Afrika",
+  "a": [],
+  "f": "",
+  "p": "",
+  "ar": 1.5
+ },
+ {
+  "c": "ss",
+  "n": "Sydsudan",
+  "l": 3,
+  "k": "Afrika",
+  "a": [
+   "syd sudan"
+  ],
+  "f": "",
+  "p": "",
+  "ar": 2.0
+ },
+ {
+  "c": "sd",
+  "n": "Sudan",
+  "l": 3,
+  "k": "Afrika",
+  "a": [],
+  "f": "",
+  "p": "",
+  "ar": 2.0
+ },
+ {
+  "c": "tg",
+  "n": "Togo",
+  "l": 3,
+  "k": "Afrika",
+  "a": [],
+  "f": "",
+  "p": "",
+  "ar": 1.618
+ },
+ {
+  "c": "ug",
+  "n": "Uganda",
+  "l": 3,
+  "k": "Afrika",
+  "a": [],
+  "f": "",
+  "p": "",
+  "ar": 1.5
+ },
+ {
+  "c": "zm",
+  "n": "Zambia",
+  "l": 3,
+  "k": "Afrika",
+  "a": [],
+  "f": "",
+  "p": "",
+  "ar": 1.5
+ },
+ {
+  "c": "zw",
+  "n": "Zimbabwe",
+  "l": 3,
+  "k": "Afrika",
+  "a": [],
+  "f": "",
+  "p": "",
+  "ar": 2.0
+ },
+ {
+  "c": "ag",
+  "n": "Antigua och Barbuda",
+  "l": 3,
+  "k": "Nordamerika",
+  "a": [
+   "antigua"
+  ],
+  "f": "",
+  "p": "",
+  "ar": 1.5
+ },
+ {
+  "c": "bs",
+  "n": "Bahamas",
+  "l": 3,
+  "k": "Nordamerika",
+  "a": [],
+  "f": "",
+  "p": "",
+  "ar": 2.0
+ },
+ {
+  "c": "bb",
+  "n": "Barbados",
+  "l": 3,
+  "k": "Nordamerika",
+  "a": [],
+  "f": "",
+  "p": "",
+  "ar": 1.5
+ },
+ {
+  "c": "bz",
+  "n": "Belize",
+  "l": 3,
+  "k": "Nordamerika",
+  "a": [],
+  "f": "",
+  "p": "",
+  "ar": 1.6667
+ },
+ {
+  "c": "dm",
+  "n": "Dominica",
+  "l": 3,
+  "k": "Nordamerika",
+  "a": [],
+  "f": "",
+  "p": "",
+  "ar": 2.0
+ },
+ {
+  "c": "sv",
+  "n": "El Salvador",
+  "l": 3,
+  "k": "Nordamerika",
+  "a": [
+   "salvador"
+  ],
+  "f": "",
+  "p": "",
+  "ar": 1.7725
+ },
+ {
+  "c": "gd",
+  "n": "Grenada",
+  "l": 3,
+  "k": "Nordamerika",
+  "a": [],
+  "f": "",
+  "p": "",
+  "ar": 1.6667
+ },
+ {
+  "c": "gt",
+  "n": "Guatemala",
+  "l": 3,
+  "k": "Nordamerika",
+  "a": [],
+  "f": "",
+  "p": "",
+  "ar": 1.6
+ },
+ {
+  "c": "hn",
+  "n": "Honduras",
+  "l": 3,
+  "k": "Nordamerika",
+  "a": [],
+  "f": "",
+  "p": "",
+  "ar": 2.0
+ },
+ {
+  "c": "ni",
+  "n": "Nicaragua",
+  "l": 3,
+  "k": "Nordamerika",
+  "a": [],
+  "f": "",
+  "p": "",
+  "ar": 1.6667
+ },
+ {
+  "c": "kn",
+  "n": "Saint Kitts och Nevis",
+  "l": 3,
+  "k": "Nordamerika",
+  "a": [
+   "saint kitts",
+   "sankt kitts"
+  ],
+  "f": "",
+  "p": "",
+  "ar": 1.5
+ },
+ {
+  "c": "lc",
+  "n": "Saint Lucia",
+  "l": 3,
+  "k": "Nordamerika",
+  "a": [
+   "sankt lucia",
+   "santa lucia"
+  ],
+  "f": "",
+  "p": "",
+  "ar": 2.0
+ },
+ {
+  "c": "vc",
+  "n": "Saint Vincent och Grenadinerna",
+  "l": 3,
+  "k": "Nordamerika",
+  "a": [
+   "saint vincent",
+   "sankt vincent"
+  ],
+  "f": "",
+  "p": "",
+  "ar": 1.5
+ },
+ {
+  "c": "tt",
+  "n": "Trinidad och Tobago",
+  "l": 3,
+  "k": "Nordamerika",
+  "a": [
+   "trinidad"
+  ],
+  "f": "",
+  "p": "",
+  "ar": 1.6667
+ },
+ {
+  "c": "gy",
+  "n": "Guyana",
+  "l": 3,
+  "k": "Sydamerika",
+  "a": [],
+  "f": "",
+  "p": "",
+  "ar": 1.6667
+ },
+ {
+  "c": "sr",
+  "n": "Surinam",
+  "l": 3,
+  "k": "Sydamerika",
+  "a": [
+   "suriname"
+  ],
+  "f": "",
+  "p": "",
+  "ar": 1.5
+ },
+ {
+  "c": "fj",
+  "n": "Fiji",
+  "l": 3,
+  "k": "Oceanien",
+  "a": [
+   "fiji"
+  ],
+  "f": "",
+  "p": "",
+  "ar": 2.0
+ },
+ {
+  "c": "ki",
+  "n": "Kiribati",
+  "l": 3,
+  "k": "Oceanien",
+  "a": [],
+  "f": "",
+  "p": "",
+  "ar": 2.0
+ },
+ {
+  "c": "mh",
+  "n": "Marshallöarna",
+  "l": 3,
+  "k": "Oceanien",
+  "a": [
+   "marshall"
+  ],
+  "f": "",
+  "p": "",
+  "ar": 1.9
+ },
+ {
+  "c": "fm",
+  "n": "Mikronesien",
+  "l": 3,
+  "k": "Oceanien",
+  "a": [],
+  "f": "",
+  "p": "",
+  "ar": 1.9
+ },
+ {
+  "c": "nr",
+  "n": "Nauru",
+  "l": 3,
+  "k": "Oceanien",
+  "a": [],
+  "f": "",
+  "p": "",
+  "ar": 2.0
+ },
+ {
+  "c": "pw",
+  "n": "Palau",
+  "l": 3,
+  "k": "Oceanien",
+  "a": [],
+  "f": "",
+  "p": "",
+  "ar": 1.6
+ },
+ {
+  "c": "pg",
+  "n": "Papua Nya Guinea",
+  "l": 3,
+  "k": "Oceanien",
+  "a": [
+   "papua"
+  ],
+  "f": "",
+  "p": "",
+  "ar": 1.3333
+ },
+ {
+  "c": "ws",
+  "n": "Samoa",
+  "l": 3,
+  "k": "Oceanien",
+  "a": [],
+  "f": "",
+  "p": "",
+  "ar": 2.0
+ },
+ {
+  "c": "sb",
+  "n": "Salomonöarna",
+  "l": 3,
+  "k": "Oceanien",
+  "a": [
+   "salomon"
+  ],
+  "f": "",
+  "p": "",
+  "ar": 2.0
+ },
+ {
+  "c": "to",
+  "n": "Tonga",
+  "l": 3,
+  "k": "Oceanien",
+  "a": [],
+  "f": "",
+  "p": "",
+  "ar": 2.0
+ },
+ {
+  "c": "tv",
+  "n": "Tuvalu",
+  "l": 3,
+  "k": "Oceanien",
+  "a": [],
+  "f": "",
+  "p": "",
+  "ar": 2.0
+ },
+ {
+  "c": "vu",
+  "n": "Vanuatu",
+  "l": 3,
+  "k": "Oceanien",
+  "a": [],
+  "f": "",
+  "p": "",
+  "ar": 1.6667
+ }
+]

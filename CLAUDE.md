@@ -27,6 +27,7 @@ lib/prototypes.ts            prototype discovery (wraps the generated registry)
 lib/theme-colors.ts          read theme tokens as colors for canvas/WebGL
 lib/auth.ts, proxy.ts        password gate
 public/thumbnails/           <slug>-light.webp, <slug>-dark.webp, <slug>-og.jpg
+public/assets/<slug>/        static files a prototype needs (NOT behind the gate)
 scripts/generate-registry.ts validates every prototype, writes lib/*.generated.ts
 scripts/thumbnails.ts        captures thumbnails with Playwright
 ```
@@ -41,7 +42,8 @@ scripts/thumbnails.ts        captures thumbnails with Playwright
 | `pnpm lint` | ESLint |
 | `pnpm typecheck` | Registry + route types + `tsc --noEmit` |
 | `pnpm build` | Production build |
-| `pnpm check` | lint + typecheck + build |
+| `pnpm test` | Runs every `*.test.ts` under `app/` and `lib/` (Node test runner via tsx) |
+| `pnpm check` | lint + typecheck + test + build |
 | `pnpm thumbnails --slug <a,b>` | Build, then capture those prototypes |
 | `pnpm thumbnails --missing` | Only prototypes without thumbnails |
 | `pnpm thumbnails` | All prototypes |
@@ -202,6 +204,11 @@ export default function Page() {
 - Use the current model IDs from the Anthropic docs; document the choice in `HOW_IT_WORKS.md` → AI Usage.
 - API routes under `/api/<slug>/` are behind the password gate, unless the prototype is public, in which case they are open (the public page needs them). Rate-limit or otherwise protect expensive public endpoints.
 
+### Static assets and tests
+
+- Static files a prototype needs (images, SVGs, audio) go in `public/assets/<slug>/`. That path skips the password gate so public prototypes work; never put anything private there.
+- Pure logic with tricky rules gets a `<name>.test.ts` next to it using `node:test` and `node:assert/strict`. `pnpm test` picks it up.
+
 ### Storage
 
 - Wrap all `localStorage` access in try/catch (private mode and quota errors throw).
@@ -233,3 +240,5 @@ One line per lesson. Add one whenever something breaks and gets fixed.
 - Canvas trails faded by painting a translucent background leave gray ghosts (8-bit rounding); fade with `globalCompositeOperation = "destination-out"` over a transparent canvas instead.
 - shadcn `DrawerContent` sets `data-[vaul-drawer-direction=bottom]:max-h-[80vh]`; override with the same variant prefix, a plain `max-h-*` loses.
 - Vercel env vars must be enabled for **Preview** too, not just Production, or preview deployments see them as unset; redeploy after changing them.
+- Calling `SpeechRecognition.available()` on page load crashed headless Chromium's renderer ("Page crashed"); call it only after a user tap, with a timeout, and stub it in Playwright.
+- A CSS animation with `fill-mode: both` keeps overriding `opacity` after it ends; remove the animation class before hiding an element with `opacity-0`.

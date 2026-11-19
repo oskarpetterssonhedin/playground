@@ -38,6 +38,8 @@ export async function proxy(request: NextRequest) {
 }
 
 export const config = {
-  // Everything except Next's build assets and the favicon.
-  matcher: ["/((?!_next/static|_next/image|favicon.ico).*)"],
+  // Everything except Next's build assets, the favicon and /assets/*.
+  // public/assets/ is never gated: public prototypes need their static files
+  // there. Don't put anything private in public/assets/.
+  matcher: ["/((?!_next/static|_next/image|favicon.ico|assets/).*)"],
 };
