@@ -3,7 +3,7 @@
   "description": "Röststyrt flaggspel: säg landet, så flyger planet dit på världskartan.",
   "tags": ["spel", "barn", "röst", "karta"],
   "createdAt": "2026-11-19",
-  "updatedAt": "2026-11-20T08:32:05.000Z",
+  "updatedAt": "2026-11-20T08:35:30.000Z",
   "hidden": false,
-  "public": true
+  "public": false
 }
