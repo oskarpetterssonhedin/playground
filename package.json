@@ -8,14 +8,15 @@
     "start": "next start",
     "lint": "eslint",
     "typecheck": "tsc --noEmit",
-    "check": "pnpm lint && pnpm typecheck && pnpm build",
+    "check": "pnpm lint && pnpm typecheck && pnpm test && pnpm build",
     "registry": "tsx scripts/generate-registry.ts",
     "thumbnails": "tsx scripts/thumbnails.ts",
     "predev": "pnpm registry",
     "prebuild": "pnpm registry",
     "pretypecheck": "pnpm registry && next typegen",
     "prelint": "pnpm registry",
-    "postinstall": "tsx scripts/generate-registry.ts"
+    "postinstall": "tsx scripts/generate-registry.ts",
+    "test": "tsx scripts/test.ts"
   },
   "dependencies": {
     "@base-ui/react": "^1.9.0",

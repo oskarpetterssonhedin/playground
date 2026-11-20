@@ -1,0 +1,352 @@
+{
+ "free": [
+  {
+   "flag": "se",
+   "said": "sverige",
+   "expect": {
+    "result": "right"
+   }
+  },
+  {
+   "flag": "se",
+   "said": "sveri",
+   "expect": {
+    "result": "right"
+   }
+  },
+  {
+   "flag": "se",
+   "said": "sverje",
+   "expect": {
+    "result": "right"
+   }
+  },
+  {
+   "flag": "se",
+   "said": "Sverige!",
+   "expect": {
+    "result": "right"
+   }
+  },
+  {
+   "flag": "se",
+   "said": "det är sverige",
+   "expect": {
+    "result": "right"
+   }
+  },
+  {
+   "flag": "se",
+   "said": "fejje",
+   "expect": {
+    "result": "notUnderstood"
+   }
+  },
+  {
+   "flag": "se",
+   "said": "norge",
+   "expect": {
+    "result": "wrong",
+    "heard": "no",
+    "partOf": null
+   }
+  },
+  {
+   "flag": "se",
+   "said": "mamma titta",
+   "expect": {
+    "result": "notUnderstood"
+   }
+  },
+  {
+   "flag": "no",
+   "said": "nooje",
+   "expect": {
+    "result": "right"
+   }
+  },
+  {
+   "flag": "no",
+   "said": "norje",
+   "expect": {
+    "result": "right"
+   }
+  },
+  {
+   "flag": "dk",
+   "said": "danma",
+   "expect": {
+    "result": "right"
+   }
+  },
+  {
+   "flag": "fi",
+   "said": "finnan",
+   "expect": {
+    "result": "right"
+   }
+  },
+  {
+   "flag": "fi",
+   "said": "fin land",
+   "expect": {
+    "result": "right"
+   }
+  },
+  {
+   "flag": "jp",
+   "said": "apan",
+   "expect": {
+    "result": "right"
+   }
+  },
+  {
+   "flag": "de",
+   "said": "tyklan",
+   "expect": {
+    "result": "right"
+   }
+  },
+  {
+   "flag": "fr",
+   "said": "frankie",
+   "expect": {
+    "result": "right"
+   }
+  },
+  {
+   "flag": "it",
+   "said": "italen",
+   "expect": {
+    "result": "right"
+   }
+  },
+  {
+   "flag": "it",
+   "said": "italjen",
+   "expect": {
+    "result": "right"
+   }
+  },
+  {
+   "flag": "gb",
+   "said": "stobitanien",
+   "expect": {
+    "result": "right"
+   }
+  },
+  {
+   "flag": "gb",
+   "said": "england",
+   "expect": {
+    "result": "wrong",
+    "heard": "gb-eng",
+    "partOf": "gb"
+   }
+  },
+  {
+   "flag": "gb-eng",
+   "said": "england",
+   "expect": {
+    "result": "right"
+   }
+  },
+  {
+   "flag": "gb-eng",
+   "said": "storbritannien",
+   "expect": {
+    "result": "wrong",
+    "heard": "gb",
+    "partOf": "gb"
+   }
+  },
+  {
+   "flag": "br",
+   "said": "basilien",
+   "expect": {
+    "result": "right"
+   }
+  },
+  {
+   "flag": "is",
+   "said": "isla",
+   "expect": {
+    "result": "right"
+   }
+  },
+  {
+   "flag": "is",
+   "said": "irland",
+   "expect": {
+    "result": "wrong",
+    "heard": "ie",
+    "partOf": null
+   }
+  },
+  {
+   "flag": "nl",
+   "said": "holland",
+   "expect": {
+    "result": "right"
+   }
+  },
+  {
+   "flag": "ch",
+   "said": "svajts",
+   "expect": {
+    "result": "right"
+   }
+  },
+  {
+   "flag": "us",
+   "said": "u s a",
+   "expect": {
+    "result": "right"
+   }
+  },
+  {
+   "flag": "us",
+   "said": "amerika",
+   "expect": {
+    "result": "right"
+   }
+  },
+  {
+   "flag": "mz",
+   "said": "mocambique",
+   "expect": {
+    "result": "right"
+   }
+  },
+  {
+   "flag": "ng",
+   "said": "nigeria",
+   "expect": {
+    "result": "right"
+   }
+  },
+  {
+   "flag": "ne",
+   "said": "nigeria",
+   "expect": {
+    "result": "wrong",
+    "heard": "ng",
+    "partOf": null
+   }
+  },
+  {
+   "flag": "kr",
+   "said": "sydkorea",
+   "expect": {
+    "result": "right"
+   }
+  },
+  {
+   "flag": "cd",
+   "said": "kongo",
+   "expect": {
+    "result": "right"
+   }
+  },
+  {
+   "flag": "nz",
+   "said": "nya zeeland",
+   "expect": {
+    "result": "right"
+   }
+  },
+  {
+   "flag": "lv",
+   "said": "ledtråd",
+   "expect": {
+    "result": "hint"
+   }
+  },
+  {
+   "flag": "lv",
+   "said": "lett råd",
+   "expect": {
+    "result": "hint"
+   }
+  },
+  {
+   "flag": "lv",
+   "said": "jag vill ha en ledtråd",
+   "expect": {
+    "result": "hint"
+   }
+  },
+  {
+   "flag": "lv",
+   "said": "hjälp",
+   "expect": {
+    "result": "hint"
+   }
+  },
+  {
+   "flag": "lv",
+   "said": "vet inte",
+   "expect": {
+    "result": "hint"
+   }
+  },
+  {
+   "flag": "lv",
+   "said": "lettland",
+   "expect": {
+    "result": "right"
+   }
+  }
+ ],
+ "choices": [
+  {
+   "options": [
+    "se",
+    "ua",
+    "in"
+   ],
+   "flag": "se",
+   "said": "vejje",
+   "expect": {
+    "result": "right"
+   }
+  },
+  {
+   "options": [
+    "se",
+    "ua",
+    "in"
+   ],
+   "flag": "se",
+   "said": "ukraina",
+   "expect": {
+    "result": "wrong",
+    "heard": "ua"
+   }
+  },
+  {
+   "options": [
+    "dk",
+    "fr",
+    "gb"
+   ],
+   "flag": "dk",
+   "said": "damak",
+   "expect": {
+    "result": "right"
+   }
+  },
+  {
+   "options": [
+    "dk",
+    "fr",
+    "gb"
+   ],
+   "flag": "dk",
+   "said": "ledtråd",
+   "expect": {
+    "result": "hint"
+   }
+  }
+ ]
+}

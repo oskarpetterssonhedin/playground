@@ -1,0 +1,121 @@
+/*
+ * Flaggspel tokens and keyframes, scoped to `.flaggspel`.
+ * Dark is the default theme; light overrides below. Components use these via
+ * Tailwind arbitrary values (`bg-(--map-visited)`) or SVG fill/stroke vars.
+ */
+.flaggspel {
+  --map-sea: oklch(0.89 0.018 240);
+  --map-dot: oklch(0.74 0.03 240);
+  --map-land: oklch(0.995 0 0);
+  --map-edge: oklch(0.8 0.012 240);
+  --map-visited: oklch(0.74 0.16 62);
+  --success: oklch(0.58 0.16 150);
+  --success-foreground: oklch(1 0 0);
+  --ease-smooth: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.dark .flaggspel {
+  --map-sea: oklch(0.17 0.018 250);
+  --map-dot: oklch(0.32 0.025 250);
+  --map-land: oklch(0.31 0.016 250);
+  --map-edge: oklch(0.41 0.018 250);
+  --map-visited: oklch(0.8 0.15 72);
+  --success: oklch(0.72 0.17 150);
+  --success-foreground: oklch(0.18 0.02 150);
+}
+
+.flaggspel .fs-land {
+  fill: var(--map-land);
+  stroke: var(--map-edge);
+  stroke-width: 0.5px;
+}
+.flaggspel .fs-visited path {
+  fill: var(--map-visited);
+  stroke: var(--map-visited);
+  stroke-width: 0.5px;
+  animation: fs-fade-in 600ms var(--ease-smooth) both;
+}
+.flaggspel .fs-route {
+  fill: none;
+  stroke: var(--map-visited);
+  stroke-width: 2px;
+  stroke-linecap: round;
+  filter: drop-shadow(0 0 3px var(--map-visited));
+}
+
+@keyframes fs-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fs-card-in {
+  from { opacity: 0; transform: translateY(24px) scale(0.96); }
+  to { opacity: 1; transform: none; }
+}
+.flaggspel .fs-card-in {
+  animation: fs-card-in 400ms var(--ease-smooth) both;
+}
+
+@keyframes fs-shake {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-10px); }
+  40% { transform: translateX(8px); }
+  60% { transform: translateX(-5px); }
+  80% { transform: translateX(3px); }
+}
+.flaggspel .fs-shake {
+  animation: fs-shake 400ms var(--ease-smooth);
+}
+
+@keyframes fs-rise {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: none; }
+}
+.flaggspel .fs-rise {
+  animation: fs-rise 350ms var(--ease-smooth) both;
+}
+
+@keyframes fs-pop {
+  from { opacity: 0; transform: scale(0.6); }
+  to { opacity: 1; transform: scale(1); }
+}
+.flaggspel .fs-pop {
+  animation: fs-pop 300ms var(--ease-smooth) both;
+}
+
+/* Calm listening ring around the mic button. */
+@keyframes fs-listen {
+  from { transform: scale(1); opacity: 0.55; }
+  to { transform: scale(1.45); opacity: 0; }
+}
+.flaggspel .fs-listen {
+  animation: fs-listen 1600ms var(--ease-smooth) infinite;
+}
+
+/* Ring that pulses out from a country (win, hint answer, skip). */
+@keyframes fs-ring {
+  from { transform: translate(-50%, -50%) scale(0.2); opacity: 0.9; }
+  to { transform: translate(-50%, -50%) scale(1); opacity: 0; }
+}
+.flaggspel .fs-ring {
+  animation: fs-ring 1200ms var(--ease-smooth) both;
+}
+.flaggspel .fs-ring-loop {
+  animation: fs-ring 1400ms var(--ease-smooth) infinite;
+}
+
+/* Particles: each sets --dx / --dy. */
+@keyframes fs-particle {
+  0% { transform: translate(-50%, -50%) translate(0, 0) scale(1); opacity: 1; }
+  100% { transform: translate(-50%, -50%) translate(var(--dx), var(--dy)) scale(0.4); opacity: 0; }
+}
+.flaggspel .fs-particle {
+  animation: fs-particle 900ms var(--ease-smooth) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .flaggspel .fs-listen,
+  .flaggspel .fs-ring-loop {
+    animation: none;
+  }
+}
