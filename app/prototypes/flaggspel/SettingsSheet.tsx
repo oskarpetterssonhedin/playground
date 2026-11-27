@@ -31,6 +31,7 @@ type Props = {
 const MIC_TEXT: Record<MicState, string> = {
   unknown: "Inte testad än",
   ok: "Mikrofonen fungerar",
+  tap: "Mikrofonen fungerar. Tryck på Prata inför varje svar.",
   blocked: "Mikrofonen är avstängd",
   unsupported: "Webbläsaren kan inte lyssna",
 };
@@ -124,7 +125,7 @@ export function SettingsSheet(p: Props) {
 
           <Section title="Mikrofon">
             <p className="flex items-center gap-2 text-sm">
-              <span className={cn("size-2 rounded-full", p.mic === "ok" ? "bg-(--success)" : p.mic === "unknown" ? "bg-muted-foreground" : "bg-destructive")} />
+              <span className={cn("size-2 rounded-full", p.mic === "ok" || p.mic === "tap" ? "bg-(--success)" : p.mic === "unknown" ? "bg-muted-foreground" : "bg-destructive")} />
               {MIC_TEXT[p.mic]}
             </p>
             {p.local && LOCAL_TEXT[p.local] && (
@@ -138,7 +139,7 @@ export function SettingsSheet(p: Props) {
               </div>
             )}
             <p className="text-sm text-muted-foreground">
-              Tillåt mikrofonen när webbläsaren frågar. Fungerar bäst i Chrome. Sitt nära, håll det tyst och låt barnet säga bara landet.
+              Tillåt mikrofonen när webbläsaren frågar. Fungerar bäst i Chrome. Sitt nära, håll det tyst och låt barnet säga bara landet. På iPhone och iPad: tryck på Prata och säg landet. Fungerar det ändå inte, slå på Diktering under Inställningar, Allmänt, Tangentbord.
             </p>
           </Section>
 

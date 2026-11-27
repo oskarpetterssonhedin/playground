@@ -39,7 +39,12 @@ type RecCtor = {
 };
 type PhraseCtor = new (phrase: string, boost: number) => unknown;
 
-export type MicState = "unknown" | "ok" | "blocked" | "unsupported";
+/**
+ * "tap": permission is granted but the browser refuses to start listening
+ * without a fresh tap (iPhone Safari). The game then listens only when
+ * "Prata" is pressed.
+ */
+export type MicState = "unknown" | "ok" | "tap" | "blocked" | "unsupported";
 export type LocalState = "" | "available" | "downloadable" | "downloading" | "unavailable";
 
 function getSR(): RecCtor | null {
@@ -78,6 +83,16 @@ export function useSpeechInput(options: Options) {
     localOK: false,
     timer: 0 as ReturnType<typeof setTimeout> | 0,
     mic: (getSR() ? "unknown" : "unsupported") as MicState,
+    /** getUserMedia succeeded once this game. */
+    permitted: false,
+    /** The recognizer started from a tap; its errors are final. */
+    tapRec: null as Rec | null,
+    /**
+     * Keep the mic track open only where recognition can read from it
+     * (Chromium: start(track), which ships alongside available()). Elsewhere,
+     * notably iPhone Safari, an open track steals the mic from recognition.
+     */
+    keepTrack: typeof getSR()?.available === "function",
   });
 
   const setMicState = useCallback((m: MicState) => {
@@ -113,7 +128,7 @@ export function useSpeechInput(options: Options) {
       return;
     }
     if (s.mic === "blocked") return;
-    if (s.track && s.track.readyState === "live") return;
+    if (s.permitted && (!s.keepTrack || s.track?.readyState === "live")) return;
     if (!navigator.mediaDevices?.getUserMedia) {
       blocked();
       return;
@@ -122,8 +137,10 @@ export function useSpeechInput(options: Options) {
       const stream = await navigator.mediaDevices.getUserMedia({
         audio: { echoCancellation: true, noiseSuppression: false, autoGainControl: true },
       });
-      s.track = stream.getAudioTracks()[0] ?? null;
-      setMicState("ok");
+      s.permitted = true;
+      if (s.keepTrack) s.track = stream.getAudioTracks()[0] ?? null;
+      else stream.getTracks().forEach((t) => t.stop());
+      if (s.mic !== "tap") setMicState("ok");
     } catch {
       blocked();
     }
@@ -172,7 +189,7 @@ export function useSpeechInput(options: Options) {
     }
     rec.onstart = () => {
       if (rec !== s.rec) return;
-      setMicState("ok");
+      if (s.mic !== "tap") setMicState("ok");
       setActive(true);
     };
     rec.onerror = (e) => {
@@ -186,12 +203,22 @@ export function useSpeechInput(options: Options) {
         s.localOK = false;
         return;
       }
-      if (err === "not-allowed" || err === "service-not-allowed") blocked();
+      if (err === "not-allowed" || err === "service-not-allowed") {
+        // Permission was granted but an automatic start was refused: wait for a tap.
+        if (s.permitted && rec !== s.tapRec) {
+          s.listening = false;
+          dropRec();
+          setMicState("tap");
+          return;
+        }
+        blocked();
+      }
     };
     rec.onend = () => {
       if (rec !== s.rec) return;
       setActive(false);
-      if (s.listening && s.mic !== "blocked") {
+      // In "tap" mode a timer can't restart it; the next tap will.
+      if (s.listening && s.mic !== "blocked" && s.mic !== "tap") {
         setTimeout(() => {
           if (rec === s.rec && s.listening) begin();
         }, T.restartDelay);
@@ -243,7 +270,7 @@ export function useSpeechInput(options: Options) {
   /** Start listening 250 ms from now (after speech has ended). */
   const listen = useCallback(() => {
     const s = r.current;
-    if (s.mic === "blocked" || s.mic === "unsupported") return;
+    if (s.mic === "blocked" || s.mic === "unsupported" || s.mic === "tap") return;
     s.listening = true;
     if (s.timer) clearTimeout(s.timer);
     s.timer = setTimeout(async () => {
@@ -253,6 +280,17 @@ export function useSpeechInput(options: Options) {
     }, T.listenDelay);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [primeMic]);
+
+  /** Start listening right now, inside the tap handler (needed on iPhone). */
+  const listenNow = useCallback(() => {
+    const s = r.current;
+    if (s.mic === "blocked" || s.mic === "unsupported") return;
+    s.listening = true;
+    if (s.timer) clearTimeout(s.timer);
+    begin();
+    s.tapRec = s.rec;
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   useEffect(() => {
     const s = r.current;
@@ -268,5 +306,5 @@ export function useSpeechInput(options: Options) {
     };
   }, []);
 
-  return { mic, active, local, primeMic, listen, mute, refreshLocal, installLocal };
+  return { mic, active, local, primeMic, listen, listenNow, mute, refreshLocal, installLocal };
 }

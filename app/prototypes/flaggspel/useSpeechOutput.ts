@@ -60,6 +60,18 @@ export function useSpeechOutput({ voiceId, rate, onStart }: Options) {
     } catch {}
   }, []);
 
+  /**
+   * Call synchronously inside a tap: iPhone Safari only allows speech after
+   * speechSynthesis has been used once from a user gesture.
+   */
+  const unlock = useCallback(() => {
+    try {
+      const u = new SpeechSynthesisUtterance(" ");
+      u.volume = 0;
+      window.speechSynthesis?.speak(u);
+    } catch {}
+  }, []);
+
   const say = useCallback((text: string) => {
     return new Promise<void>((resolve) => {
       const { voiceId: id, rate: r, onStart: start, voices: list } = opts.current;
@@ -104,5 +116,5 @@ export function useSpeechOutput({ voiceId, rate, onStart }: Options) {
     });
   }, []);
 
-  return { voices, caption, speaking, speakingRef, say, cancel };
+  return { voices, caption, speaking, speakingRef, say, cancel, unlock };
 }
