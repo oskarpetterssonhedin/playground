@@ -170,6 +170,12 @@ export function useGame({ map, cardImg, area }: Refs) {
         publish();
       }
     },
+    onNothing: (error) => {
+      const s = g.current;
+      if (s.phase !== "ask") return;
+      s.heard = error ? `Mikrofonen svarade: ${error}. Tryck och prata igen.` : "Jag hörde inget. Tryck och prata igen.";
+      publish();
+    },
     onResult: (fin, mid) => {
       const s = g.current;
       if (!s.cur || s.phase !== "ask") return;

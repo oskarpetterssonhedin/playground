@@ -62,6 +62,8 @@ type Options = {
   phrases: () => { names: string[]; boost: number };
   /** The mic turned out to be unusable. */
   onBlocked: () => void;
+  /** A session ended without hearing anything, or failed with an error code. */
+  onNothing?: (error: string | null) => void;
 };
 
 export function useSpeechInput(options: Options) {
@@ -87,6 +89,9 @@ export function useSpeechInput(options: Options) {
     permitted: false,
     /** The recognizer started from a tap; its errors are final. */
     tapRec: null as Rec | null,
+    /** The current recognizer delivered at least one result. */
+    heard: false,
+    lastError: null as string | null,
     /**
      * Keep the mic track open only where recognition can read from it
      * (Chromium: start(track), which ships alongside available()). Elsewhere,
@@ -176,7 +181,9 @@ export function useSpeechInput(options: Options) {
     rec.lang = "sv-SE";
     rec.interimResults = true;
     rec.maxAlternatives = 10;
-    rec.continuous = true;
+    // Continuous mode often never delivers results on iPhone Safari; there,
+    // listen for one answer per session (the next tap starts a new one).
+    rec.continuous = s.keepTrack;
     if (s.localOK) {
       try {
         rec.processLocally = true;
@@ -195,6 +202,7 @@ export function useSpeechInput(options: Options) {
     rec.onerror = (e) => {
       if (rec !== s.rec) return;
       const err = e.error;
+      if (err !== "aborted") s.lastError = err;
       if (err === "audio-capture" && s.track && s.trackOK) {
         s.trackOK = false;
         return;
@@ -217,6 +225,7 @@ export function useSpeechInput(options: Options) {
     rec.onend = () => {
       if (rec !== s.rec) return;
       setActive(false);
+      if (!s.heard && s.mic === "tap") opts.current.onNothing?.(s.lastError);
       // In "tap" mode a timer can't restart it; the next tap will.
       if (s.listening && s.mic !== "blocked" && s.mic !== "tap") {
         setTimeout(() => {
@@ -226,6 +235,7 @@ export function useSpeechInput(options: Options) {
     };
     rec.onresult = (e) => {
       if (rec !== s.rec || !s.listening || !opts.current.canListen()) return;
+      s.heard = true;
       const fin: string[] = [];
       const mid: string[] = [];
       for (let i = e.resultIndex; i < e.results.length; i++) {
@@ -243,6 +253,8 @@ export function useSpeechInput(options: Options) {
     if (!getSR() || s.mic === "blocked") return;
     dropRec();
     s.rec = makeRec();
+    s.heard = false;
+    s.lastError = null;
     const live = s.track?.readyState === "live";
     try {
       if (live && s.trackOK) s.rec.start(s.track!);
