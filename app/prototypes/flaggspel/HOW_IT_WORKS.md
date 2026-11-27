@@ -35,12 +35,16 @@ StartScreen ──level tap (unlocks audio + mic)──► useGame.start()
 - **Motion**: decelerating curves only. `prefers-reduced-motion`: camera jumps, no flight or card fly, no particles.
 - **Settings** (Vuxen sheet, right on desktop, bottom on mobile): level, always three choices, voice + test + tempo, mic status + on-device recognition, new trip. Saved as `flaggspel:level|voice|rate|alwaysChoices`.
 
+## Public
+
+Public since 2026-11-27 (Oskar asked): `/p/flaggspel` works without the password, with og:title/description from metadata and `flaggspel-og.jpg` as og:image. Flags load from `/assets/`, which is outside the gate.
+
 ## Approved Exceptions to CLAUDE.md
 
 1. **Full screen** instead of `max-w-2xl`.
 2. **Kid buttons keep text labels on mobile** ("Prata"/"Jag lyssnar", "Ledtråd").
 3. **No control panel / Randomize**: the Vuxen panel is settings, not tunable parameters.
-4. **Flags in `public/assets/flaggspel/flags/`**, shown with `<img>`. `proxy.ts` excludes `/assets/` from the password gate so the public link would still show them.
+4. **Flags in `public/assets/flaggspel/flags/`**, shown with `<img>`. `proxy.ts` excludes `/assets/` from the password gate so the public link shows them.
 
 Also: particle colors in the celebration come from the flag SVG's own fills (data, not design colors), set inline.
 
