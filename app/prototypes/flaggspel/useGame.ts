@@ -459,6 +459,7 @@ export function useGame({ map, cardImg, area }: Refs) {
     start: (level: LevelId) => {
       initAudio();
       output.unlock();
+      input.warmUp();
       setLevel(level);
       g.current.screen = "play";
       g.current.phase = "ask";
@@ -550,6 +551,7 @@ export function useGame({ map, cardImg, area }: Refs) {
       setSettingsOpen(false);
       initAudio();
       output.unlock();
+      input.warmUp();
       g.current.screen = "play";
       void primeMic()
         .then(checkLocal)

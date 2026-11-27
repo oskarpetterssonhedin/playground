@@ -293,6 +293,32 @@ export function useSpeechInput(options: Options) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [primeMic]);
 
+  /**
+   * Call inside the tap that starts the game. Outside Chromium (iPhone
+   * Safari) the speech-recognition permission prompt appears on the first
+   * start(); doing it here means the prompt is answered before the first
+   * flag instead of swallowing the first answer. The session is aborted at once.
+   */
+  const warmUp = useCallback(() => {
+    const SR = getSR();
+    if (!SR || r.current.keepTrack) return;
+    try {
+      const w = new SR();
+      w.lang = "sv-SE";
+      const stop = () => {
+        try {
+          w.abort();
+        } catch {}
+      };
+      w.onstart = stop;
+      w.onerror = () => {};
+      w.onend = () => {};
+      w.onresult = () => {};
+      w.start();
+      setTimeout(stop, 1500);
+    } catch {}
+  }, []);
+
   /** Start listening right now, inside the tap handler (needed on iPhone). */
   const listenNow = useCallback(() => {
     const s = r.current;
@@ -318,5 +344,5 @@ export function useSpeechInput(options: Options) {
     };
   }, []);
 
-  return { mic, active, local, primeMic, listen, listenNow, mute, refreshLocal, installLocal };
+  return { mic, active, local, primeMic, listen, listenNow, warmUp, mute, refreshLocal, installLocal };
 }
