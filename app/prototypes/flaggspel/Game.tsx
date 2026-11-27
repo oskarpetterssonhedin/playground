@@ -113,6 +113,7 @@ export default function Game() {
                 heard={ui.heard}
                 listening={game.listening}
                 micOff={micOff}
+                tapToTalk={game.mic === "tap"}
                 onMic={actions.mic}
                 onHint={actions.hint}
               />

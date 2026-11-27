@@ -170,6 +170,12 @@ export function useGame({ map, cardImg, area }: Refs) {
         publish();
       }
     },
+    onNothing: (error) => {
+      const s = g.current;
+      if (s.phase !== "ask") return;
+      s.heard = error ? `Mikrofonen svarade: ${error}. Tryck och prata igen.` : "Jag hörde inget. Tryck och prata igen.";
+      publish();
+    },
     onResult: (fin, mid) => {
       const s = g.current;
       if (!s.cur || s.phase !== "ask") return;
@@ -200,7 +206,7 @@ export function useGame({ map, cardImg, area }: Refs) {
   useEffect(() => {
     muteRef.current = input.mute;
   });
-  const { listen, mute, primeMic } = input;
+  const { listen, listenNow, mute, primeMic } = input;
 
   const listenIfAsking = (t: number) => {
     if (t === g.current.turn && g.current.phase === "ask") listen();
@@ -452,6 +458,8 @@ export function useGame({ map, cardImg, area }: Refs) {
   const actions = {
     start: (level: LevelId) => {
       initAudio();
+      output.unlock();
+      input.warmUp();
       setLevel(level);
       g.current.screen = "play";
       g.current.phase = "ask";
@@ -501,9 +509,11 @@ export function useGame({ map, cardImg, area }: Refs) {
         return;
       }
       playBlip();
+      output.cancel();
       s.heard = "Nu lyssnar jag!";
       publish();
-      listen();
+      // Start inside the tap: iPhone Safari refuses starts from timers.
+      listenNow();
     },
     openSettings: () => {
       mute();
@@ -534,11 +544,14 @@ export function useGame({ map, cardImg, area }: Refs) {
     },
     testVoice: () => {
       initAudio();
+      output.unlock();
       void say("Hej Ted och Adam! Vilket land har den här flaggan?");
     },
     newTrip: () => {
       setSettingsOpen(false);
       initAudio();
+      output.unlock();
+      input.warmUp();
       g.current.screen = "play";
       void primeMic()
         .then(checkLocal)

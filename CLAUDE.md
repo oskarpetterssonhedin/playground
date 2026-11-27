@@ -242,3 +242,4 @@ One line per lesson. Add one whenever something breaks and gets fixed.
 - Vercel env vars must be enabled for **Preview** too, not just Production, or preview deployments see them as unset; redeploy after changing them.
 - Calling `SpeechRecognition.available()` on page load crashed headless Chromium's renderer ("Page crashed"); call it only after a user tap, with a timeout, and stub it in Playwright.
 - A CSS animation with `fill-mode: both` keeps overriding `opacity` after it ends; remove the animation class before hiding an element with `opacity-0`.
+- iPhone Safari: start SpeechRecognition and the first speechSynthesis call inside a tap handler, not from a timer, and don't keep a getUserMedia track open alongside recognition; otherwise listening silently fails. Trigger the speech-recognition permission prompt on the game-start tap, or it eats the first answer.

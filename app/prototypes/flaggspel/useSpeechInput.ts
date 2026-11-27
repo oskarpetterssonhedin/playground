@@ -39,7 +39,12 @@ type RecCtor = {
 };
 type PhraseCtor = new (phrase: string, boost: number) => unknown;
 
-export type MicState = "unknown" | "ok" | "blocked" | "unsupported";
+/**
+ * "tap": permission is granted but the browser refuses to start listening
+ * without a fresh tap (iPhone Safari). The game then listens only when
+ * "Prata" is pressed.
+ */
+export type MicState = "unknown" | "ok" | "tap" | "blocked" | "unsupported";
 export type LocalState = "" | "available" | "downloadable" | "downloading" | "unavailable";
 
 function getSR(): RecCtor | null {
@@ -57,6 +62,8 @@ type Options = {
   phrases: () => { names: string[]; boost: number };
   /** The mic turned out to be unusable. */
   onBlocked: () => void;
+  /** A session ended without hearing anything, or failed with an error code. */
+  onNothing?: (error: string | null) => void;
 };
 
 export function useSpeechInput(options: Options) {
@@ -78,6 +85,19 @@ export function useSpeechInput(options: Options) {
     localOK: false,
     timer: 0 as ReturnType<typeof setTimeout> | 0,
     mic: (getSR() ? "unknown" : "unsupported") as MicState,
+    /** getUserMedia succeeded once this game. */
+    permitted: false,
+    /** The recognizer started from a tap; its errors are final. */
+    tapRec: null as Rec | null,
+    /** The current recognizer delivered at least one result. */
+    heard: false,
+    lastError: null as string | null,
+    /**
+     * Keep the mic track open only where recognition can read from it
+     * (Chromium: start(track), which ships alongside available()). Elsewhere,
+     * notably iPhone Safari, an open track steals the mic from recognition.
+     */
+    keepTrack: typeof getSR()?.available === "function",
   });
 
   const setMicState = useCallback((m: MicState) => {
@@ -113,7 +133,7 @@ export function useSpeechInput(options: Options) {
       return;
     }
     if (s.mic === "blocked") return;
-    if (s.track && s.track.readyState === "live") return;
+    if (s.permitted && (!s.keepTrack || s.track?.readyState === "live")) return;
     if (!navigator.mediaDevices?.getUserMedia) {
       blocked();
       return;
@@ -122,8 +142,10 @@ export function useSpeechInput(options: Options) {
       const stream = await navigator.mediaDevices.getUserMedia({
         audio: { echoCancellation: true, noiseSuppression: false, autoGainControl: true },
       });
-      s.track = stream.getAudioTracks()[0] ?? null;
-      setMicState("ok");
+      s.permitted = true;
+      if (s.keepTrack) s.track = stream.getAudioTracks()[0] ?? null;
+      else stream.getTracks().forEach((t) => t.stop());
+      if (s.mic !== "tap") setMicState("ok");
     } catch {
       blocked();
     }
@@ -159,7 +181,9 @@ export function useSpeechInput(options: Options) {
     rec.lang = "sv-SE";
     rec.interimResults = true;
     rec.maxAlternatives = 10;
-    rec.continuous = true;
+    // Continuous mode often never delivers results on iPhone Safari; there,
+    // listen for one answer per session (the next tap starts a new one).
+    rec.continuous = s.keepTrack;
     if (s.localOK) {
       try {
         rec.processLocally = true;
@@ -172,12 +196,13 @@ export function useSpeechInput(options: Options) {
     }
     rec.onstart = () => {
       if (rec !== s.rec) return;
-      setMicState("ok");
+      if (s.mic !== "tap") setMicState("ok");
       setActive(true);
     };
     rec.onerror = (e) => {
       if (rec !== s.rec) return;
       const err = e.error;
+      if (err !== "aborted") s.lastError = err;
       if (err === "audio-capture" && s.track && s.trackOK) {
         s.trackOK = false;
         return;
@@ -186,12 +211,23 @@ export function useSpeechInput(options: Options) {
         s.localOK = false;
         return;
       }
-      if (err === "not-allowed" || err === "service-not-allowed") blocked();
+      if (err === "not-allowed" || err === "service-not-allowed") {
+        // Permission was granted but an automatic start was refused: wait for a tap.
+        if (s.permitted && rec !== s.tapRec) {
+          s.listening = false;
+          dropRec();
+          setMicState("tap");
+          return;
+        }
+        blocked();
+      }
     };
     rec.onend = () => {
       if (rec !== s.rec) return;
       setActive(false);
-      if (s.listening && s.mic !== "blocked") {
+      if (!s.heard && s.mic === "tap") opts.current.onNothing?.(s.lastError);
+      // In "tap" mode a timer can't restart it; the next tap will.
+      if (s.listening && s.mic !== "blocked" && s.mic !== "tap") {
         setTimeout(() => {
           if (rec === s.rec && s.listening) begin();
         }, T.restartDelay);
@@ -199,6 +235,7 @@ export function useSpeechInput(options: Options) {
     };
     rec.onresult = (e) => {
       if (rec !== s.rec || !s.listening || !opts.current.canListen()) return;
+      s.heard = true;
       const fin: string[] = [];
       const mid: string[] = [];
       for (let i = e.resultIndex; i < e.results.length; i++) {
@@ -216,6 +253,8 @@ export function useSpeechInput(options: Options) {
     if (!getSR() || s.mic === "blocked") return;
     dropRec();
     s.rec = makeRec();
+    s.heard = false;
+    s.lastError = null;
     const live = s.track?.readyState === "live";
     try {
       if (live && s.trackOK) s.rec.start(s.track!);
@@ -243,7 +282,7 @@ export function useSpeechInput(options: Options) {
   /** Start listening 250 ms from now (after speech has ended). */
   const listen = useCallback(() => {
     const s = r.current;
-    if (s.mic === "blocked" || s.mic === "unsupported") return;
+    if (s.mic === "blocked" || s.mic === "unsupported" || s.mic === "tap") return;
     s.listening = true;
     if (s.timer) clearTimeout(s.timer);
     s.timer = setTimeout(async () => {
@@ -253,6 +292,43 @@ export function useSpeechInput(options: Options) {
     }, T.listenDelay);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [primeMic]);
+
+  /**
+   * Call inside the tap that starts the game. Outside Chromium (iPhone
+   * Safari) the speech-recognition permission prompt appears on the first
+   * start(); doing it here means the prompt is answered before the first
+   * flag instead of swallowing the first answer. The session is aborted at once.
+   */
+  const warmUp = useCallback(() => {
+    const SR = getSR();
+    if (!SR || r.current.keepTrack) return;
+    try {
+      const w = new SR();
+      w.lang = "sv-SE";
+      const stop = () => {
+        try {
+          w.abort();
+        } catch {}
+      };
+      w.onstart = stop;
+      w.onerror = () => {};
+      w.onend = () => {};
+      w.onresult = () => {};
+      w.start();
+      setTimeout(stop, 1500);
+    } catch {}
+  }, []);
+
+  /** Start listening right now, inside the tap handler (needed on iPhone). */
+  const listenNow = useCallback(() => {
+    const s = r.current;
+    if (s.mic === "blocked" || s.mic === "unsupported") return;
+    s.listening = true;
+    if (s.timer) clearTimeout(s.timer);
+    begin();
+    s.tapRec = s.rec;
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   useEffect(() => {
     const s = r.current;
@@ -268,5 +344,5 @@ export function useSpeechInput(options: Options) {
     };
   }, []);
 
-  return { mic, active, local, primeMic, listen, mute, refreshLocal, installLocal };
+  return { mic, active, local, primeMic, listen, listenNow, warmUp, mute, refreshLocal, installLocal };
 }
